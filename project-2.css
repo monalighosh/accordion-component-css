@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+.accordion {
+	max-width: 780px;
+}
+
+.accordion ul {
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 12px;
+	list-style-type: none;
+	box-shadow: 4px 45px 15px -27px rgba(0,0,0,.2);
+}
+
+.accordion li {
+	border: 1px solid #000;
+	margin-bottom: 2px;
+}
+
+.accordion li:last-child {
+	margin-bottom: 0;
+}
+
+.accordion li input[type="radio"] {
+	display: none;
+}
+
+.accordion li label {
+	display: block;
+	padding: 10px;
+	background: -webkit-linear-gradient(right, #bf2942, #d95b43 80%);
+	background: linear-gradient(to left, #bf2942, #d95b43 80%);
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+
+.tabContent {
+	display: none;
+	padding: 10px;
+	background: -webkit-linear-gradient(bottom, #dedede, #fff);
+	background: linear-gradient(to top, #dedede, #fff);
+}
+
+.tabContent p {
+	text-transform: capitalize;
+}
+
+.accordion li input[type="radio"]:checked ~ label {
+	background: #bf2942;
+	color: #fff;
+}
+
+.accordion li input[type="radio"]:checked ~ label ~ .tabContent {
+	display: block;
+}
