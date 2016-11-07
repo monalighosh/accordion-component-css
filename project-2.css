@@ -15,10 +15,11 @@ body {
 
 .accordion {
 	max-width: 780px;
+	margin: 0 auto;
 }
 
 .accordion ul {
-	border: 1px solid #000;
+	border: 1px solid #afafaf;
 	border-radius: 10px;
 	padding: 12px;
 	list-style-type: none;
@@ -26,7 +27,7 @@ body {
 }
 
 .accordion li {
-	border: 1px solid #000;
+	border: 1px solid #afafaf;
 	margin-bottom: 2px;
 }
 
@@ -41,19 +42,21 @@ body {
 .accordion li label {
 	display: block;
 	padding: 10px;
-	background: -webkit-linear-gradient(right, #bf2942, #d95b43 80%);
-	background: linear-gradient(to left, #bf2942, #d95b43 80%);
+	background: -webkit-linear-gradient(right, #e8d3a4, #00a0ae 80%);
+	background: linear-gradient(to left, #e8d3a4, #00a0ae 80%);
 	font-size: 18px;
 	text-transform: uppercase;
-	color: #000;
+	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+	transition: background .5s ease;
+	cursor: pointer;
 }
 
 .tabContent {
 	display: none;
 	padding: 10px;
-	background: -webkit-linear-gradient(bottom, #dedede, #fff);
-	background: linear-gradient(to top, #dedede, #fff);
+	background: -webkit-linear-gradient(bottom, #f2ebdb, #fff);
+	background: linear-gradient(to top, #f2ebdb, #fff);
 }
 
 .tabContent p {
@@ -61,8 +64,8 @@ body {
 }
 
 .accordion li input[type="radio"]:checked ~ label {
-	background: #bf2942;
-	color: #fff;
+	background: #e8d3a4;
+	color: #000;
 }
 
 .accordion li input[type="radio"]:checked ~ label ~ .tabContent {
