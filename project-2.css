@@ -10,7 +10,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin-top: 30px;
-	margin-left: 10px;
 }
 
 .accordion {
@@ -70,4 +69,60 @@ body {
 
 .accordion li input[type="radio"]:checked ~ label ~ .tabContent {
 	display: block;
+}
+
+/*---Media Queries---*/
+
+@media (max-width: 1024px) {
+
+	.accordion li label {
+		background: -webkit-linear-gradient(right, #fff, #000 80%);
+		background: linear-gradient(to left, #fff, #000 80%);
+	}
+
+	.tabContent {
+		background: -webkit-linear-gradient(bottom, #dbdbdb, #fff);
+		background: linear-gradient(to top, #dbdbdb, #fff);
+	}
+
+	.accordion li input[type="radio"]:checked ~ label {
+		background: #dbdbdb;
+	}
+
+}
+
+@media (max-width: 600px) {
+	
+	.accordion li label {
+		background: -webkit-linear-gradient(right, #efd607, #409600 80%);
+		background: linear-gradient(to left, #efd607, #409600 80%);
+	}
+
+	.tabContent {
+		background: -webkit-linear-gradient(bottom, #fff7b1, #fff);
+		background: linear-gradient(to top, #fff7b1, #fff);
+	}
+
+	.accordion li input[type="radio"]:checked ~ label {
+		background: #efd607;
+	}
+
+}
+
+@media (max-width: 360px) {
+	
+	.accordion li label {
+		background: -webkit-linear-gradient(right, #dd6f04, #0082ca 80%);
+		background: linear-gradient(to left, #dd6f04, #0082ca 80%);
+	}
+
+	.tabContent {
+		background: -webkit-linear-gradient(bottom, #eebe90, #fff);
+		background: linear-gradient(to top, #eebe90, #fff);
+	}
+
+	.accordion li input[type="radio"]:checked ~ label {
+		background: #dd6f04;
+	}
+
 }
